@@ -2,9 +2,9 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-publish_mode: editorial_workflow
-media_folder: "static/images" # Media files will be stored in the repo under static/images
-public_folder: "/images" # The src attribute for uploaded media will begin with /images
+# publish_mode: editorial_workflow
+media_folder: "static/img" # Media files will be stored in the repo under static/images
+public_folder: "/img" # The src attribute for uploaded media will begin with /images
 
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -16,36 +16,25 @@ collections: # A list of collections the CMS should be able to edit
       field: post
       value: true
     fields: # The fields each document in this collection have
-      - {label: "Post", name: "post", widget: "hidden", default: true}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Author Avatar", name: "authorAvatar", widget: "image", required: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Image", name: "featured_image", widget: "image", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
     files:
-      - file: "content/_index.md"
-        label: "Home Page"
-        name: "home"
+      - file: "content/about.md"
+        label: "About"
+        name: "about"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
-          - {label: "Image", name: "featured_image", widget: "image", required: false}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "content/contact.md"
-        label: "Contact"
-        name: "contact"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
-          - {label: "Type", name: "type", widget: "hidden", default: "page"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "content/post/_index.md"
-        label: "View Posts"
-        name: "view-posts"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Comments", name: "comments", widget: "bool"}
           - {label: "Date", name: "date", widget: "datetime"}
-          - {label: "Post", name: "post", widget: "hidden", default: false}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Draft", name: "draft", widget: "bool"}
+          - {label: "No Author", name: "noauthor", widget: "bool"}
+          - {label: "Share", name: "share", widget: "bool"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Type", name: "type", widget: "string"}
+          - {label: "Menu Weight", name: "menu.main.wieght", widget: "int"}

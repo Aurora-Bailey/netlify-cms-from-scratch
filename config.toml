@@ -1,31 +1,67 @@
-title = "Notre-Dame de Paris"
-baseURL = "https://agitated-galileo-e95e88.netlify.com/"
-languageCode = "en-us"
-theme = "themes/ananke"
-themesDir = "./"
-
-MetaDataFormat = "yaml"
-DefaultContentLanguage = "en"
-SectionPagesMenu = "main"
-Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
-googleAnalytics = ""
+baseurl         = "/"
+theme           = "hugo-casper-two"
+languageCode    = "en-US"
+disqusShortname = ""
+paginate        = 6
+#SectionPagesMenu = "main"
+canonifyurls    = true
 enableRobotsTXT = true
 
 [sitemap]
-  changefreq = "monthly"
-  priority = 0.5
-  filename = "sitemap.xml"
+changefreq = "monthly"
+priority = 0.5
+filename = "sitemap.xml"
 
 [params]
-  favicon = ""
-  description = "The last theme you'll ever need. Maybe."
-  facebook = ""
-  twitter = "https://twitter.com/GoHugoIO"
-  instagram = ""
-  youtube = ""
-  github = ""
-  linkedin = ""
-  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-  background_color_class = "bg-black"
-  featured_image = "/images/gohugo-default-sample-hero-image.jpg"
-  recent_posts_number = 2
+  title       = "Ocieo"
+  subtitle    = "Ocieo subtitle here"
+  copyright   = "© 2018"
+
+  cover       = "img/blog-cover.jpg"
+  description = "Here is a description of your site."
+  metaDescription = ""
+  googleAnalytics = ""
+  customCSS = []
+  RSSLink = ""
+
+  twitterName = "faketryghost"
+  fbName = "fakeghost"
+  githubName = "eueung"
+  linkedinName = "eueung"
+  mediumName = ""
+
+  logo = "hugo-logo.png"
+  orgName = "Ocieo"
+  orgWebsite = "https://www.telematika.org"
+  orgDescription = "Here is a description placeholder for your org"
+
+  showSupport = true
+
+  author = "Jon Wayne"
+  authorAvatar = "img/ghost-icon.png"
+  authorLocation = "Bandung, ID"
+  authorWebsite = "https://eueung.github.io"
+  authorDescription = "Your description here"
+
+  pageNotFoundTitle = "404 - Page not found"
+
+  #casper or caspertwo
+  singleViewStyle = "casper"
+
+[permalinks]
+  post = "/post/:slug/"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 200
+
+[[menu.main]]
+  name = "Go"
+  url = "/tags/golang/"
+  weight = 100
+
+[[menu.main]]
+  name = "Categories"
+  url = "/tags/create"
+  weight = 99
