@@ -12,7 +12,11 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/post" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., "{{year}}-{{month}}-{{day}}-{{slug}}" YYYY-MM-DD-title.md
+    filter:
+      field: post
+      value: true
     fields: # The fields each document in this collection have
+      - {label: "Post", name: "post", widget: "hidden", default: true}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
@@ -21,11 +25,19 @@ collections: # A list of collections the CMS should be able to edit
   - name: "pages"
     label: "Pages"
     files:
-      - file: "site/content/_index.md"
+      - file: "content/_index.md"
         label: "Home Page"
         name: "home"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "description", widget: "text"}
           - {label: "Image", name: "featured_image", widget: "image", required: false}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/post/_index.md"
+        label: "View Posts"
+        name: "view-posts"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Date", name: "date", widget: "datetime"}
+          - {label: "Post", name: "post", widget: "hidden", default: false}
           - {label: "Body", name: "body", widget: "markdown"}
