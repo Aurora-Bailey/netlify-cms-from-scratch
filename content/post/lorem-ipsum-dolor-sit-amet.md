@@ -2,9 +2,7 @@
 post: true
 title: ' Lorem ipsum dolor sit amet'
 date: 2018-02-24T18:06:29.177Z
-description: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis
-  massa nec ante aliquet ullamcorper.
+description: Lorem ipsum
 featured_image: /images/Pope-Edouard-de-Beaumont-1844.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis massa nec ante aliquet ullamcorper. Nulla volutpat vitae lorem vitae faucibus. Pellentesque facilisis leo ultricies ipsum egestas sollicitudin. Mauris ac sapien nulla. Aliquam sollicitudin sit amet orci vel ultrices. Curabitur id eleifend ipsum. Maecenas ultrices diam ex, eget viverra libero molestie in. Integer eu nisl non sem rutrum blandit. Integer laoreet odio quam, vel vulputate elit elementum a.
