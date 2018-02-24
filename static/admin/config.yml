@@ -34,4 +34,4 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Share", name: "share", widget: "boolean"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Type", name: "type", widget: "string"}
-          - {label: "Menu Weight", name: "menu.main.wieght", widget: "number"}
+          - {label: "Menu Weight", name: "menu", widget: "object", fields: {label: "Menu Weight", name: "main", widget: "object", fields: {label: "Menu Weight", name: "weight", widget: "number"}}}
