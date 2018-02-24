@@ -27,11 +27,11 @@ collections: # A list of collections the CMS should be able to edit
         label: "About"
         name: "about"
         fields:
-          - {label: "Comments", name: "comments", widget: "bool"}
+          - {label: "Comments", name: "comments", widget: "boolean"}
           - {label: "Date", name: "date", widget: "datetime"}
-          - {label: "Draft", name: "draft", widget: "bool"}
-          - {label: "No Author", name: "noauthor", widget: "bool"}
-          - {label: "Share", name: "share", widget: "bool"}
+          - {label: "Draft", name: "draft", widget: "boolean"}
+          - {label: "No Author", name: "noauthor", widget: "boolean"}
+          - {label: "Share", name: "share", widget: "boolean"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Type", name: "type", widget: "string"}
           - {label: "Menu Weight", name: "menu.main.wieght", widget: "int"}
