@@ -34,3 +34,4 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Share", name: "share", widget: "boolean"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Type", name: "type", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
