@@ -52,11 +52,6 @@ filename = "sitemap.xml"
   post = "/post/:slug/"
 
 [[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 200
-
-[[menu.main]]
   name = "About Me"
   url = "/about/"
   weight = 150
