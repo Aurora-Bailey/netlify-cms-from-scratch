@@ -57,6 +57,11 @@ filename = "sitemap.xml"
   weight = 200
 
 [[menu.main]]
+  name = "About Me"
+  url = "/about/"
+  weight = 150
+
+[[menu.main]]
   name = "Go"
   url = "/tags/golang/"
   weight = 100
